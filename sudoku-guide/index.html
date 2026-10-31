@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Get Better at Sudoku Without Relying on Guesswork</title>
+<meta name="description" content="Learn how to narrow possibilities, spot naked and hidden singles, keep clean candidate notes, and recover when you get stuck in Sudoku without guessing.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Get Better at Sudoku Without Relying on Guesswork">
+<meta property="og:description" content="Logic, notes and a simple reset routine to solve Sudoku with reasoning instead of guesses.">
+<meta property="og:image" content="https://raufgbob.github.io/sudoku-guide/sudoku-feature.jpg">
+<meta property="og:url" content="https://raufgbob.github.io/sudoku-guide/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raufgbob.github.io/sudoku-guide/sudoku-feature.jpg">
+<link rel="canonical" href="https://raufgbob.github.io/sudoku-guide/">
+<style>
+:root{--bg:#f6f8fc;--card:#fff;--text:#1d2433;--muted:#5b6475;--accent:#1747b5;--line:#e3e8f2}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1320;--card:#161d2e;--text:#e6eaf3;--muted:#a3adc2;--accent:#6ea2ff;--line:#26304a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:18px/1.75 Georgia,'Times New Roman',serif}
+header.site{background:var(--card);border-bottom:1px solid var(--line);padding:14px 16px;font:600 16px system-ui,sans-serif}
+header.site div{max-width:780px;margin:auto}
+article{max-width:780px;margin:32px auto;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:clamp(20px,5vw,48px)}
+h1{font:800 clamp(28px,5vw,40px)/1.2 system-ui,sans-serif;margin:0 0 10px}
+h2{font:700 24px/1.3 system-ui,sans-serif;margin:40px 0 12px}
+h3{font:700 20px/1.3 system-ui,sans-serif;margin:28px 0 8px}
+.meta{color:var(--muted);font:14px system-ui,sans-serif;margin-bottom:24px}
+img{width:100%;height:auto;border-radius:10px;display:block;margin:24px 0}
+blockquote{margin:20px 0;padding:12px 20px;border-left:4px solid var(--accent);background:var(--bg);border-radius:6px;font-style:italic}
+a{color:var(--accent)}
+li{margin:6px 0}
+footer{text-align:center;color:var(--muted);font:14px system-ui,sans-serif;padding:20px 16px 40px}
+</style>
+</head>
+<body>
+<header class="site"><div>Sudoku Guide</div></header>
+<article>
+<h1>How to Get Better at Sudoku Without Relying on Guesswork</h1>
+<div class="meta">Published October 31, 2026 · 5 min read</div>
+<img src="sudoku-feature.jpg" alt="How to get better at Sudoku without relying on guesswork" width="1200" height="630">
+
+<p>The most useful question in Sudoku is not “Which number should I try?” It is “What can I rule out?” That change in approach turns a board full of empty squares into a series of smaller, manageable decisions. Instead of hoping an entry works, you build a reason for placing it.</p>
+<p>For readers exploring <a href="http://sudoku-it.org/">sudoku-it.org</a>, this guide focuses on the thinking behind the puzzle: how to narrow possibilities, recognize useful clues, recover when you get stuck, and make practice more purposeful.</p>
+
+<h2>Understand the Relationship Between Cells</h2>
+<p>A classic Sudoku board contains 81 cells arranged in nine rows, nine columns, and nine three-by-three boxes. Each row, column, and box must contain the digits 1 through 9 without repetition. The numbers supplied at the beginning remain fixed. (<a href="https://sudoku.com/how-to-play/sudoku-rules-for-complete-beginners/" rel="nofollow">sudoku.com</a>)</p>
+<p>Every empty cell therefore belongs to three overlapping groups. A number that works in its row may still be impossible because of its column or box.</p>
+<p>Think of these groups as three separate checks. Before confirming an answer, all three must agree. This relationship explains why a number placed on one side of the board can affect possibilities somewhere else.</p>
+
+<h2>Separate a Possible Answer From a Proven Answer</h2>
+<p>One of the easiest mistakes is entering a number because nothing immediately rules it out. However, “allowed for now” and “definitely correct” mean different things.</p>
+<p>Consider a hypothetical cell where both 4 and 6 remain possible. Placing 4 because it looks reasonable does not establish that 6 is wrong. You need another restriction before choosing between them.</p>
+<p>A useful habit is to describe your reasoning in one sentence:</p>
+<blockquote>“This cell must be 6 because its row excludes every other digit except 4 and 6, and its column already contains 4.”</blockquote>
+<p>If your explanation is simply “I think it fits,” keep the entry as a possibility rather than a confirmed answer.</p>
+
+<h2>Switch Between Two Ways of Looking</h2>
+<p>When one approach stops producing answers, change the question you are asking.</p>
+<img src="sudoku-singles.jpg" alt="Naked single vs hidden single in Sudoku" width="1200" height="630" loading="lazy">
+<h3>Look at One Cell</h3>
+<p>Choose an empty cell and examine the digits already present in its row, column, and box. Eliminate those digits from consideration.</p>
+<p>If only one remains, you have a single candidate, often called a naked single. The answer follows from excluding all eight alternatives. (<a href="https://www.sudokuoftheday.com/techniques/single-candidate" rel="nofollow">sudokuoftheday.com</a>)</p>
+<p>For example, suppose a cell initially appears to allow 1, 5, and 8. Its column contains 1, while its box contains 8. That leaves 5.</p>
+<h3>Look for One Digit</h3>
+<p>Now reverse the process. Choose a digit missing from a row, column, or box and examine where it could go.</p>
+<p>Imagine a box that still needs a 7. Several cells are empty, but existing 7s in the intersecting rows and columns rule out every location except one. That remaining cell must contain 7.</p>
+<p>This is a hidden single: a digit has only one possible position within a group, even if that cell appears to allow other digits. (<a href="https://sudoku.com/sudoku-rules/hidden-singles/" rel="nofollow">sudoku.com</a>)</p>
+
+<h2>Make Your Notes Consistent</h2>
+<p>Candidate notes are small marks showing which digits remain possible. Their value depends on how clearly you maintain them.</p>
+<p>For beginner practice, try recording every remaining candidate in the cells you are actively analyzing. Avoid mixing complete candidate lists with unexplained partial notes, because you may later mistake an omitted digit for an eliminated one.</p>
+<p>After confirming an answer, revisit the empty cells sharing its row, column, and box. Remove the newly placed digit from their candidates.</p>
+<p>If you use a digital interface, check how its notes behave. Some tools update candidates automatically; others leave that work to the player. Understand the behavior before relying on it.</p>
+
+<h2>Use a Reset Routine When Progress Stops</h2>
+<p>Getting stuck does not automatically mean you need an advanced technique. You may have overlooked a simple restriction or retained an outdated note.</p>
+<img src="sudoku-reset-steps.jpg" alt="5-step Sudoku reset routine for when you get stuck" width="1200" height="630" loading="lazy">
+<p>Try this sequence:</p>
+<ol>
+<li><strong>Review recent entries.</strong> Confirm that each followed from a clear deduction.</li>
+<li><strong>Check nearly completed groups.</strong> A missing digit may now be obvious.</li>
+<li><strong>Refresh candidate notes.</strong> Remove possibilities excluded by confirmed numbers.</li>
+<li><strong>Change your focus.</strong> Switch from examining cells to tracking one digit.</li>
+<li><strong>Pause if necessary.</strong> Return with a specific area to inspect.</li>
+</ol>
+<p>If these checks produce nothing, the puzzle may require a technique you have not learned. That is a useful signal to seek an explanation, rather than repeatedly scanning without a plan.</p>
+
+<h2>Turn Hints Into Lessons</h2>
+<p>If your puzzle tool provides hints, use them to understand a move rather than merely reveal an answer.</p>
+<p>Before requesting help, identify your difficulty. Are you unable to narrow a particular cell, or can you not find any promising area?</p>
+<p>After viewing the hint, reconstruct the deduction yourself. Identify the relevant row, column, or box and explain why the alternatives fail. Then continue without immediately requesting another hint.</p>
+
+<h2>Measure Progress by Your Reasoning</h2>
+<p>For your next session, choose one goal: keep accurate notes, identify hidden singles, or explain every confirmed placement.</p>
+<p>Finishing matters, but understanding how you reached the solution makes the practice more useful. Start with one defensible move, update the board carefully, and let the next decision follow from what you now know.</p>
+</article>
+<footer>© 2026 Sudoku Guide</footer>
+</body>
+</html>
